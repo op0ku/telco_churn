@@ -1,5 +1,5 @@
 import sys
-sys.path.append('C:/Users/solace.dark/Documents/Jupyter Notebook/Projects/churn_prediction')
+sys.path.append('./telco_customer_churn')
 from explore import wrangle
 
 import streamlit as st
