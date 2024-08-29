@@ -1,5 +1,6 @@
 import sys
-sys.path.append('./telco_customer_churn')
+import os 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from explore import wrangle
 
 import streamlit as st
