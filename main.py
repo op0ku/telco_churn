@@ -44,7 +44,8 @@ def add_sidebar():
     
     return None
 
-model = CatBoostClassifier('./catboost_model.cbm')
+model_instance = CatBoostClassifier()
+model = model_instance.load_model('./catboost_model.cbm')
 
 def get_input(model, input_data):
     input_array = np.array([input_data[feature] for feature in model.feature_names_]).reshape(1, -1)
