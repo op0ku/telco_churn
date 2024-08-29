@@ -6,6 +6,7 @@ import numpy as np
 import joblib
 import shap
 import matplotlib.pyplot as plt
+from catboost import CatBoostClassifier
 
 def add_sidebar():
     st.sidebar.header('Customer Features')
