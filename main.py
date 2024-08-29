@@ -3,9 +3,9 @@ from explore import wrangle
 import streamlit as st
 import math
 import numpy as np
-import joblib
 import shap
 import matplotlib.pyplot as plt
+from catboost import CatBoostClassifier
 
 def add_sidebar():
     st.sidebar.header('Customer Features')
@@ -44,7 +44,7 @@ def add_sidebar():
     
     return None
 
-model = joblib.load('./catboost_model.pkl')
+model = CatBoostClassifier('./catboost_model.cbm')
 
 def get_input(model, input_data):
     input_array = np.array([input_data[feature] for feature in model.feature_names_]).reshape(1, -1)
