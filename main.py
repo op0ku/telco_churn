@@ -44,7 +44,7 @@ def add_sidebar():
     
     return None
 
-model = joblib.load('./catboost_model.pkl')
+model = joblib.load('catboost_model.pkl')
 
 def get_input(model, input_data):
     input_array = np.array([input_data[feature] for feature in model.feature_names_]).reshape(1, -1)
